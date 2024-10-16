@@ -12,7 +12,7 @@ function User(){
         <div>
             <h1>user effect:{user.length}</h1>
             {
-                user.map(friend => <List friend ={friend}></List>)
+                user.map(friend => <List key={friend.id} friend ={friend}></List>)
             }
           
         </div>

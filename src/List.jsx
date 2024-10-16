@@ -1,5 +1,5 @@
 
-
+import PropTypes from 'prop-types';
 
 function List({friend}){
     
@@ -9,10 +9,18 @@ function List({friend}){
     
 <h4>testing:{name}</h4>
         <h4> testing2{email}</h4>
+
+     
  
 </div>
     )
 
 }
+List.propTypes = {
+    friend: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        email: PropTypes.string.isRequired,
+    }).isRequired,
+};
 
 export default List;
